@@ -1,0 +1,29 @@
+conta_controller.php
+  <?php
+
+require_once "../model/conta_model.php";
+
+
+$conta1 = new ContaBancaria();
+$conta1->setTitular("victor");
+$conta1->depositar(1000);
+
+
+$conta2 = new ContaBancaria();
+$conta2->setTitular("joao");
+$conta2->depositar(5000);
+
+
+$conta3 = new ContaBancaria();
+$conta3->setTitular("marselo");
+$conta3->depositar(750);
+
+
+$contas = [
+    $conta1,
+    $conta2,
+    $conta3
+];
+
+
+require_once "../view/contas.php";
